@@ -1,6 +1,6 @@
 /**   	Created: 08/21/20
- *  	Modified: 11/06/20
- *  	Completed: 
+ *  	Modified: 11/24/20
+ *  	Completed: 11/24/20
  * 
  * Description: 
  * 		Breadth first search, in this algorithm we use a boolean visited array. For simplicity, 
@@ -11,65 +11,44 @@
  *  
  *  	@author Noel Brambila 
  */
-
-// Java program to print BFS traversal from a given source vertex. 
-// BFS(int s) traverses vertices reachable from s. 
-import java.io.*; 
+package BFS;
 import java.util.*; 
 
-public class breadthFirstSearch {       // This class represents a directed graph using adjacency list representation 
-	private int V;                                          // Number of vertices 
-	private LinkedList<Integer> adj[];                      //Adjacency Lists 
+public class breadthFirstSearch {	// A directed graph using adjacency list representation 
+   private int vertices;                                         
+   private LinkedList<Integer> list[];                      //Adjacency Lists 
 
-	breadthFirstSearch(int v) {             	            // Constructor 
-		V = v; 
-		adj = new LinkedList[v]; 
-		for (int i=0; i<v; ++i) 
-			adj[i] = new LinkedList(); 
-	} 
+   breadthFirstSearch(int v) {             	            // Constructor 
+	   vertices = v; 
+	   list = new LinkedList[v]; 
+	   for (int i = 0; i < v; ++i) 
+		   list[i] = new LinkedList(); 
+   }
 
-	void addEdge(int v,int w){  	                        // Function to add an edge into the graph 
-		adj[v].add(w); 
-	} 
+   void addEdge(int root,int edge) {  	              	// Adding an edge into the graph 
+	   list[root].add(edge); 
+   } 
 
-	void BFS(int s){                                	    // prints BFS traversal from a given source s 
-		boolean visited[] = new boolean[V];                 // Mark all the vertices as not visited(By default set as false) 
+   void BFS(int root) {                               			// Outputs BFS traversal from given root 
+	   boolean visited[] = new boolean[vertices];             	// Having all the vertices as not visited (By default set as false) 
 
-		LinkedList<Integer> queue = new LinkedList<Integer>();      // Create a queue for BFS
+	   LinkedList<Integer> queue = new LinkedList<Integer>(); 	// Create a queue for BFS
 
-		visited[s]=true; 		                            // Mark the current node as visited and enqueue it 
-		queue.add(s); 
+	   visited[root] = true; 		                            // Mark the current node as visited 
+	   queue.add(root); 										
 
-		while (queue.size() != 0){ 
-			s = queue.poll();                               // Dequeue a vertex from queue and print it 
-			System.out.print(s+" "); 
+	   while (queue.size() != 0){ 
+		   root = queue.poll();                               // Retrieve and remove a vertex from queue 
+		   System.out.print(root + " "); 
 
-			Iterator<Integer> i = adj[s].listIterator();    // Get all adjacent vertices of the dequeued vertex s. If a adjacent has not been visited, then mark it visited and enqueue it 
-			while (i.hasNext()) { 
-				int n = i.next(); 
-				if (!visited[n]) { 
-					visited[n] = true; 
-					queue.add(n); 
-				} 
-			} 
-		} 
-	} 
-
-	public static void main(String args[]){                 	// Driver method to 
-		breadthFirstSearch g = new breadthFirstSearch(4); 
-
-		g.addEdge(0, 1); 
-		g.addEdge(0, 2); 
-		g.addEdge(1, 2); 
-		g.addEdge(2, 0); 
-		g.addEdge(2, 3); 
-		g.addEdge(3, 3); 
-
-		System.out.println("Following is Breadth First Traversal "+ 
-						"(starting from vertex 2)"); 
-
-		g.BFS(2); 
-	} 
+		   Iterator<Integer> i = list[root].listIterator();    // Get all adjacent vertices of the dequeued vertex s. If a adjacent has not been visited, then mark it visited and enqueue it 
+		   while (i.hasNext()) { 
+			   int n = i.next(); 
+			   if (!visited[n]) { 
+				   visited[n] = true; 
+				   queue.add(n); 
+			   } 
+		   } 
+	   } 
+   } 
 } 
-// This code is contributed by Aakash Hasija 
-
