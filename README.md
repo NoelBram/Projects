@@ -1,7 +1,7 @@
-# Note: 
+### Note: 
 LeetCode Problems in C++, Java, & Python [here](https://github.com/NoelBram/Problems/Leetcode).
 
-# DeepLearning.AI TensorFlow Developer Professional Certification Course ML Projects using TensorFlow & Keras
+# DeepLearning.AI TensorFlow Developer Professional Certification Machine Learning Projects
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ISubZ_Xm2qfON37FTXpcTP3BdC9BsQeY?usp=sharing) Housing Prices
 
