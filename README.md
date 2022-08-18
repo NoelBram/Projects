@@ -9,4 +9,4 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iOl-ZEE3rq9KFfGT23FGQsSirV45IDK_?usp=sharing) Handling Complex Images
 
 ### Note: 
-LeetCode Problems in C++, Java, & Python [here](https://github.com/NoelBram/Problems/Leetcode).
+LeetCode Problems in C++, Java, & Python [here](https://github.com/NoelBram/Projects/tree/master/Leetcode).
