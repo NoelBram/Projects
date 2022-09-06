@@ -12,7 +12,7 @@
 
 ### [Convolutional Neural Networks in TensorFlow(2 of 4)](https://www.coursera.org/learn/convolutional-neural-networks-tensorflow?specialization=tensorflow-in-practice) `In progress...`
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HcQL9UDN3Zoz1GN8Tt0JfQSjY248UPcD?usp=sharing) Using CNN's with the Cats vs Dogs Dataset `In progress...`
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HcQL9UDN3Zoz1GN8Tt0JfQSjY248UPcD?usp=sharing) Using CNN's with the Cats vs Dogs Dataset
 
 ### [Natural Language Processing in TensorFlow(3 of 4)](https://www.coursera.org/learn/natural-language-processing-tensorflow?specialization=tensorflow-in-practice) `In progress...`
 
