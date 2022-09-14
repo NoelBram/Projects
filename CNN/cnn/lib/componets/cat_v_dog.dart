@@ -20,7 +20,7 @@ class CatVDog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Markdown(
+    return const MarkdownBody(
       selectable: true,
       data: _markdownData,
       imageDirectory: 'https://raw.githubusercontent.com',
